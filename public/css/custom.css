@@ -1,0 +1,183 @@
+body{
+    background-color: #fff;
+}
+.app-header{
+    border-bottom: 1px solid #656768;
+    padding-bottom: 1.5%;
+}
+.app-logo{
+  color: #337ab7;
+}
+.nav-bar-color{
+  background-color: white;
+}
+.contact{
+  color: white;
+  background-color: #337ab7;
+  margin-top: 4%;
+  padding: 2%;
+  padding-top: inherit;
+}
+footer .glyphicon {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #337ab7;
+}
+.feedback{
+  border-bottom: 1px solid white;
+  padding: 1%;
+}
+.product-header{
+  border-bottom: 1px solid #656768;
+  margin:2%;
+}
+.icon-color{
+  background-color:#337ab7; 
+}
+.form-spacing{
+  margin-top: 20px;
+}
+.slider-height{
+  width: auto;
+  max-height: 300px;
+  overflow: hidden;
+  margin-top:3%;
+}
+.form-width{
+  width:120%;
+}
+.img-hover img {
+    -webkit-transition: all .3s ease; /* Safari and Chrome */
+    -moz-transition: all .3s ease; /* Firefox */
+    -o-transition: all .3s ease; /* IE 9 */
+    -ms-transition: all .3s ease; /* Opera */
+    transition: all .3s ease;
+    position:relative;
+  }
+  .img-hover img:hover {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform:translateZ(0) scale(1.20); /* Safari and Chrome */
+    -moz-transform:scale(1.20); /* Firefox */
+    -ms-transform:scale(1.20); /* IE 9 */
+    -o-transform:translatZ(0) scale(1.20); /* Opera */
+    transform:translatZ(0) scale(1.20);
+  }
+  
+  .img-hover:hover:after {
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:2;
+    width:30px;
+    height:30px;
+    
+  }
+.header_space{
+  margin-top:4%!important;
+}
+#custom-search-input {
+  margin:0;
+  margin-top: 10px;
+  padding: 0;
+}
+
+#custom-search-input .search-query {
+  padding-right: 3px;
+  padding-right: 4px \9;
+  padding-left: 3px;
+  padding-left: 4px \9;
+  /* IE7-8 doesn't have border-radius, so don't indent the padding */
+
+  margin-bottom: 0;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+
+#custom-search-input button {
+  border: 0;
+  background: none;
+  /** belows styles are working good */
+  padding: 2px 5px;
+  margin-top: 2px;
+  position: relative;
+  left: -28px;
+  /* IE7-8 doesn't have border-radius, so don't indent the padding */
+  margin-bottom: 0;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  color:#337ab7;
+}
+
+.search-query:focus + button {
+  z-index: 3;   
+}
+
+/* ul {
+  -moz-column-count: 3;
+  -moz-column-gap: 50px;
+  -webkit-column-count: 3;
+  -webkit-column-gap: 50px;
+  column-count: 3;
+  column-gap: 50px;
+}
+
+li {
+  overflow: hidden;
+} */
+
+.card {
+  margin-top: 50px;
+  font-family: 'Roboto', sans-serif;
+  color: #444;
+  border: 1px solid #999;
+  border-radius: 4px;
+  background: #eee;
+  text-align: center;
+  padding-top: 30px;
+  float: left;
+}
+.card :before {
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    background-color: #eee;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+    font-size: 28px;
+    font-style: normal;
+    left: 50%;
+    line-height: 60px;
+    position: absolute;
+    top: -30px;
+    width: 60px;
+  }
+  .card .card-question {
+    margin: 20px 0 20px;
+    font-size: 150%;
+  }
+  .card .card-separator {
+    width: 100%;
+    margin: 10px 0 10px 0;
+  }
+  .card a {
+    text-decoration: none;
+    color: #7f8c8d;
+  }
+
+
+.card-green {
+  border-top: 4px solid #337ab7;
+}
+.card-green  :before {
+    color: #337ab7;
+    content: "\F004";
+    font-family: 'FontAwesome';
+    margin-top: 24%;
+  }
+  .card-green  .card-separator {
+    border: 1px solid #337ab7;
+  }
+

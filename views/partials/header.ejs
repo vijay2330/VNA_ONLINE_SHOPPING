@@ -1,0 +1,247 @@
+<!-- <div>
+  
+          <div> -->
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                  <div class="container app-header">
+                    <div class="col-md-3 col-sm-10 col-xs-10 text-center">
+                      <h3 class="app-logo">VNA Online Shopping</h3>
+                    </div>
+                    <div class="hidden-lg hidden-md col-sm-2 col-xs-2 pull-right">
+                      <button type="button" class="navbar-toggle nav-bar-color" data-toggle="collapse" data-target="#navbar-collapse">
+                          <span class="icon-bar icon-color"></span>
+                          <span class="icon-bar icon-color"></span>
+                          <span class="icon-bar icon-color"></span>                        
+                        </button>
+                    </div>
+                    
+                    <div class="col-md-5 col-sm-12 col-xs-12">
+                      <div id="custom-search-input" class="header_space">
+                        <div class="input-group col-md-12">
+                            <input type="text" class="  search-query form-control" placeholder="Search" />
+                            <span class="input-group-btn search-button">
+                                <button class="btn" type="button">
+                                    <span class=" glyphicon glyphicon-search"></span>
+                                </button>
+                            </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4 hidden-sm hidden-xs">
+                      <ul class="nav nav-pills pull-right header_space">
+                        <li>
+                          <a href="javascript:;" class="btn btn-sm ">Service</a>
+                        </li>
+                        <li>
+                          <a href="javascript:;" class="btn btn-sm " id="loginpo" data-toggle="modal" data-trigger="focus" data-target="#loginmodal">Sign in / Register</a>
+                        </li>
+                        <li class="dropdown logout"> 
+                          <a href="javascript:;" class="btn btn-sm  dropdown-toggle" data-toggle="dropdown">You <i class="caret"></i></a>
+                          <ul class="dropdown-menu dropdown-menu-no-border dropdown-menu-right">
+                            <li>
+                              <a> Your Profile</a>
+                            </li>
+                            <li>
+                              <a id="Logout" (click)="logout()">Logout</a>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+              <div class="collapse navbar-collapse" id="navbar-collapse" style="max-height: 362px;">
+                  <ul class="nav navbar-nav" >
+                    <li class="dropdown hidden-lg hidden-md">
+                      <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">My Account</a>
+                      <ul class="dropdown-menu">
+                        <li>
+                          <a href="javascript:;">Service</a>
+                        </li>
+                        <li> 
+                          <a href="javascript:;" class="logout">User</a>
+                        </li>
+                        <li>
+                          <a id="loginpo" data-toggle="modal" data-trigger="focus" data-target="#loginmodal">Sign in/register</a>
+                          <a  type="button" id="Logout" class="logout" (click)="logout()">Logout</a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                <!-- end menu -->
+              <!-- </div> 
+            </div>  -->
+          </div>
+            <!-- ModaL-->
+            <div class="modal fade" id="loginmodal" role="tablist">
+              <div class="modal-dialog">
+                <div class="modal-content model-border">
+                  <div class="tab-content">
+                    <div class="modal-body">
+                      <div class="tab">
+                        <ul class="nav nav-tabs" role="tablist">
+                          <li role="presentation" class="active"><a href="#login_modaltab" aria-controls="login_modaltab" role="tab" data-toggle="tab">Sign in</a></li>
+                          <li role="presentation"><a href="#register_modaltab" aria-controls="register_modaltab" role="tab" data-toggle="tab" >Register</a></li>
+                        </ul>
+                        <div class="tab-content">
+                          <div role="tabpanel" class="tab-pane active" id="login_modaltab">
+                            <div class="row">
+                              <div class="col-md-6 col-sm-12 col-xs-12">
+                                <form name="login_modaltab" id="loginform">
+                                  <label for="UserName" class="form-spacing">Username or Email</label><br/>
+                                  <input type="text" class="form-width" name="UserName" placeholder="Username" id="LuserName" required><br>
+                                  <label for="password" class="form-spacing">Password</label><br/>
+                                  <input type="password" class="form-width" name="password" id="Lpassword" placeholder="Password"><br/><br/><br/>
+                                  <input type="submit" class="btn right btn-md btn-dark" value="Sign in" (click)="login()">
+                                  <span role="presentation"><a href="#forgot_modaltab" aria-controls="forgot_modaltab" role="tab" data-toggle="tab">Forgot Password?</a></span>
+                                </form>
+                              </div>
+                            </div>
+                          </div>
+                          <div role="tabpanel" class="tab-pane" id="forgot_modaltab">
+                            <div class="row">
+                              <h6 align="center">Forgot Password</h6>
+                              <form name="forgot_modaltab" id="forgotpasswordform">
+                                <div class="col-md-6">
+                                  <input type="text" name="DetailsFPassword" id="fpassword" placeholder="Enter Mail ID / User Name">
+                                </div>
+                                <div class="col-md-6">
+                                  <button type="button" class="btn btn-primary">Send</button>
+                                  <button type="button" class="btn btn-danger" style="color:white;">
+                                  <a href="#login_modaltab" aria-controls="login_modaltab" role="tab" data-toggle="tab">Cancel</a>
+                                  </button>
+                                </div>
+                              </form>
+                            </div>
+                          </div>
+                          <div role="tabpanel" class="tab-pane" id="register_modaltab">
+                            <form name="register_modaltab" id="registerform"  #registerform="ngForm" novalidate>
+                              <div class="row">
+                                <div class="col-md-12">
+                                  <div class="form-group col-md-6">
+                                    <label for="FirstName">First Name</label>
+                                    <input type="text" class="form-control mb-0" id="FirstName"  name="FirstName" pattern="^[a-zA-Z]{3,}" placeholder="First Name" required minlength="3">
+                                  </div>
+                                  <div class="form-group col-md-6">
+                                    <label for="LastName">Last Name</label>
+                                    <input type="text" class="form-control mb-0" id="LastName"  name="LastName" pattern="^[a-zA-Z]{1,}" placeholder="Last Name"  required>
+                                  </div>
+                                </div>
+                                <div class="col-md-12">
+                                  <div class="form-group col-md-6 ">
+                                    <label for="Username">Username</label>
+                                    <input type="text" class="form-control mb-0" id="UserName" name="UserName" placeholder="Username" required>
+                                  </div>
+                                  <div class="form-group col-md-6">
+                                    <label for="Email">Email</label>
+                                    <input type="text" id="Email" class="form-control mb-0" name="Email" placeholder="Email" pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9]{2,3}$" validateEqual="ConfirmEmailAddress" reverse="true" required>
+                                   </div>
+                                </div>
+                                <div class="col-md-12">
+                                  <div class="form_group col-md-6">
+                                    <label>Gender</label>  <br/>                             
+                                    <label for="gender-m"  class="radio-inline">
+                                      <input type="radio" name="gender">Male
+                                    </label>
+                                    <label for="gender-f"  class="radio-inline">
+                                      <input type="radio" name="gender">Female
+                                    </label>
+                                  </div>
+                                  <div class="form-group col-md-6">
+                                    <label for="mobileNumber">Mobile Number</label>
+                                    <input type="text" class="form-control mb-0" id="mobileNumber"  name="mobileNumber" pattern="[0-9]" placeholder="Mobile Number" required >
+                                  </div>
+                                </div>
+                                <br/>
+                                <div class="col-md-12">
+                                  <div class="form-group col-md-6">
+                                    <label for="Password">Password</label>
+                                    <input type="password" class="form-control mb-0" id="Password" name="Password" pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,16}$" placeholder="Password" validateEqual="ConfirmPassword" reverse="true" required>
+                                  </div>
+                                  <div class="form-group col-md-6">
+                                    <label for="ConfirmPassword">Confirm Your Password</label>
+                                    <input type="password" class="form-control mb-0" id="ConfirmPassword" name="ConfirmPassword" pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,16}$" placeholder="Confirm Your Password" validateEqual="Password" reverse="false">
+                                  </div>
+                                </div>
+                                <div class="col-md-12">
+                                  <div class="form-group col-md-6">
+                                    <label for="Addressline1">Address Line 1</label>
+                                    <input type="text" class="form-control mb-0" id="Addressline1"  name="Addressline1" pattern="^[a-zA-Z]{3,}" placeholder="Address Line 1" required>
+                                  </div>
+                                  <div class="form-group col-md-6">
+                                    <label for="Addressline2">Address Line 2</label>
+                                    <input type="text" class="form-control mb-0" id="Addressline2"  name="Addressline1" pattern="^[a-zA-Z]{1,}" placeholder="Address Line 2"  required>
+                                  </div>
+                                </div>
+                                <div class="col-md-12">
+                                  <div class="form-group col-md-6">
+                                    <label for="city">city</label>
+                                    <input type="text" class="form-control mb-0" id="city"  name="city" pattern="^[a-zA-Z]{3,}" placeholder="City" required>
+                                  </div>
+                                  <div class="form-group col-md-6">
+                                    <label for="pincode">Pincode</label>
+                                    <input type="text" class="form-control mb-0" id="pincode"  name="pincode" pattern="[0-9]" placeholder="Pincode"  required>
+                                  </div>
+                                </div>
+                                <div class="col-md-12">
+                                  <div class="col-sm-10">
+                                      <div class="checkbox">
+                                        <label><input type="checkbox" name="remember">Accept Terms And Conditions* </label>
+                                      </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                  <div class="form-group col-md-12">
+                                    <button type="submit" class="btn right btn-md btn-dark" id="register">Register</button>      
+                                  </div>
+                                </div>
+                              </div>
+                              
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div><!--Modal End-->
+          </div> <!-- end row -->
+        </div> <!-- end container -->
+        <script>
+          $(document).ready(function () {
+            $(".logout").hide();
+            $("#register").click(function(){
+
+
+                var UserName=document.getElementById("LuserName").value;
+                var Password=document.getElementById("Lpassword").value;
+
+
+                $.get("http://localhost:3000/login/"+UserName+'/'+Password, function(data){
+                        console.log(data.result);
+                  });
+                  
+            });
+
+            $("#register").click(function(){
+
+                var FirstName=document.getElementById("FirstName").value;
+                var LastName=document.getElementById("LastName").value;
+                var UserName=document.getElementById("UserName").value;
+                var Email=document.getElementById("Email").value;
+                var Password=document.getElementById("Password").value;
+                var Addressline1=document.getElementById("Addressline1").value;
+                var Addressline2=document.getElementById("Addressline2").value;
+                var city =document.getElementById("city").value;
+                var pincode =document.getElementById("pincode").value;
+                var Gender = document.querySelector('input[name = "gender"]:checked').value;                
+                var mobileNumber = document.getElementById("mobileNumber").value;
+
+                $.get("http://localhost:3000/register/"+FirstName+'/'+LastName+'/'+UserName+'/'+Email+'/'+Gender+'/'+Password+'/'+mobileNumber+'/'+Addressline1+'/'+Addressline2+'/'+city+'/'+pincode, function(data){
+                        console.log(data.result);
+                         location.href="http://localhost:3000";
+                  });
+                  
+            });
+
+          });
+        </script>
